@@ -1,0 +1,14 @@
+local _M = loadPrevious(...)
+
+function _M:getDammod(combat)
+
+	if combat.talented and self:knowTalent('T_BIG_HAND_AND_LITTLE_HAND') then sub('dex', 'mag') end
+	
+end
+
+_M:addCombatTraining('axe', 'T_CLOCKWORK_MASTERY')
+_M:addCombatTraining('sword', 'T_CLOCKWORK_MASTERY')
+_M:addCombatTraining('mace', 'T_CLOCKWORK_MASTERY')
+_M:addCombatTraining('knife', 'T_CLOCKWORK_MASTERY')
+
+return _M
