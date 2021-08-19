@@ -1,7 +1,7 @@
 class:bindHook(
     "Combat:getDammod:subs",
     function(self, hd) 
-        if hd.combat and hd.combat.talented and self:knowTalent(self.T_BIG_HAND_AND_LITTLE_HAND) then
+        if hd.combat and hd.combat.talented and self:knowTalent(self.T_CLOCKHAND_MASTERY) then
             hd.dammod.mag = (hd.dammod.mag or 0) + (hd.dammod.dex or 0)
             hd.dammod.dex = nil
         end
@@ -19,9 +19,9 @@ class:bindHook("Combat:attackTargetWith:attackerBonuses", function(self, hd)
     return hd
 end)
 
-_M:addCombatTraining('axe', 'T_CLOCKWORK_MASTERY')
-_M:addCombatTraining('sword', 'T_CLOCKWORK_MASTERY')
-_M:addCombatTraining('mace', 'T_CLOCKWORK_MASTERY')
-_M:addCombatTraining('knife', 'T_CLOCKWORK_MASTERY')
+_M:addCombatTraining('axe', 'T_CLOCKHAND_MASTERY')
+_M:addCombatTraining('sword', 'T_CLOCKHAND_MASTERY')
+_M:addCombatTraining('mace', 'T_CLOCKHAND_MASTERY')
+_M:addCombatTraining('knife', 'T_CLOCKHAND_MASTERY')
 
 return _M
