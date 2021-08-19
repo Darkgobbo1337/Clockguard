@@ -1,5 +1,5 @@
 newTalent{
-	name = "Big Hand and  Little Hand", short_name = "CLOCKWORK_MASTERY"
+	name = "Big Hand and  Little Hand", short_name = "CLOCKHAND_MASTERY"
 	type = {"chronomancy/clockwork_soldier", 1},
 	points = 5,
 	require = { stat = { str=function(level) return 12 + level * 6 end }, },
