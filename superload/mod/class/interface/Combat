@@ -1,9 +1,3 @@
-function _M:getDammod(combat)
-
-	if combat.talented and self:knowTalent('T_BIG_HAND_AND_LITTLE_HAND') then sub('dex', 'mag') end
-	
-end
-
 class:bindHook(
     "Combat:getDammod:subs",
     function(self, hd) 
@@ -14,7 +8,7 @@ class:bindHook(
         return hd   
     end)
 	
-	class:bindHook("Combat:attackTargetWith:attackerBonuses", function(self, hd)
+class:bindHook("Combat:attackTargetWith:attackerBonuses", function(self, hd)
     local weapon = hd.weapon
     local mult = hd.mult or 1
     if self:knowTalent(self.T_CLOCKHAND_MASTERY) and self:hasTwoHandedWeapon() and self:hasOffWeaponType("knife") and weapon and weapon.twohanded then
